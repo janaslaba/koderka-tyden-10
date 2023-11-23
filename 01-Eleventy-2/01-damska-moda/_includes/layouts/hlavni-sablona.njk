@@ -14,30 +14,15 @@
 
 </head>
 <body>
+	
+	{% include 'partials/header.njk' %}
 
-	<header class="header">
-		<h1 class="header__logo">Dámská móda</h1>
-	</header>
+	{% include 'partials/menu.njk' %}
 
-	<nav class="menu">
-		<ul class="menu__list">
-			<li class="menu__item"><a href="/" class="menu__link">Úvod</a></li>
-			<li class="menu__item"><a href="/tricka/" class="menu__link">Trička</a></li>
-			<li class="menu__item"><a href="/boty/" class="menu__link">Boty</a></li>
-		</ul>
+	{{ content | safe }}
+
 		
-	</nav>
-
-	<main class="main">
-
-		{{ content | safe }}
-
-	</main>
-
-
-	<footer class="footer">
-		&copy;2021, Czechitas
-	</footer>
+	{% include 'partials/footer.njk' %}
 
 </body>
 </html>
